@@ -1,7 +1,8 @@
-﻿using System.Net;
-using System.Xml;
+﻿using System;
 using System.Xml.Schema;
+using System.Xml;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace ConsoleApp1
 {
@@ -47,6 +48,9 @@ namespace ConsoleApp1
                 errors += $"Validation Error: {e.Message}\n";
             };
 
+            //XmlReader reader = XmlReader.Create(xmlUrl, settings);
+            //while (reader.Read()) { }
+
             try
             {
                 using (XmlReader reader = XmlReader.Create(xmlUrl, settings))
@@ -59,11 +63,11 @@ namespace ConsoleApp1
                 schemaErrors = true;
                 errors += $"Validation Error: {ex.Message}\n";
             }
-            catch (Exception ex)
-            {
-                schemaErrors = true;
-                errors += $"Other Error: {ex.Message}\n";
-            }
+            //catch (Exception ex)
+            //{
+            //    schemaErrors = true;
+            //    errors += $"Other Error: {ex.Message}\n";
+            //}
 
             if (!schemaErrors)
                 return "No Error";
@@ -74,15 +78,10 @@ namespace ConsoleApp1
         // Converts XML to JSON
         public static string Xml2Json(string xmlUrl)
         {
-            using (var client = new WebClient())
-            {
-                string content = client.DownloadString(xmlUrl);
-                XmlDocument xmlDocument = new XmlDocument();
-                xmlDocument.LoadXml(content);
-                string convertedJson = JsonConvert.SerializeXmlNode(xmlDocument, Newtonsoft.Json.Formatting.Indented);
-
-                return convertedJson;
-            }
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(xmlUrl);
+            string convertedJson = JsonConvert.SerializeXmlNode(xmlDoc, Newtonsoft.Json.Formatting.Indented);
+            return convertedJson;
         }
     }
 }
