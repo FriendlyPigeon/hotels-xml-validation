@@ -24,9 +24,9 @@
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
+            <!-- Optional Rating attribute for Hotel -->
+            <xs:attribute name="Rating" type="xs:decimal" use="optional" />
           </xs:complexType>
-          <!-- Optional Rating attribute for Hotel -->
-          <xs:attribute name="Rating" type="xs:decimal" use="optional" />
         </xs:element>
       </xs:sequence>
     </xs:complexType>
