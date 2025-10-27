@@ -9,7 +9,7 @@
               <!-- Required Name element for Hotel -->
               <xs:element name="Name" type="xs:string" />
               <!-- Required Phone element for Hotel --> 
-              <xs:element name="Phone" type="xs:string" maxOccurs="unbounded" />
+              <xs:element name="Phone" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
               <!-- Required Address element for Hotel -->
               <xs:element name="Address">
                 <xs:complexType>

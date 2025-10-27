@@ -57,6 +57,7 @@ namespace ConsoleApp1
             catch (XmlException ex)
             {
                 schemaErrors = true;
+                errors += $"Validation Error: {ex.Message}\n";
             }
             catch (Exception ex)
             {
