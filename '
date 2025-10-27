@@ -1,0 +1,35 @@
+using System.Xml;
+using System.Xml.Schema;
+namespace ConsoleApp1
+{
+    public class Program
+    {
+        public static string xmlURL = "https://raw.githubusercontent.com/FriendlyPigeon/hotels-xml-validation/refs/heads/main/Assignment4/static/Hotels.xml";
+        public static string xmlErrorURL = "https://raw.githubusercontent.com/FriendlyPigeon/hotels-xml-validation/refs/heads/main/Assignment4/static/HotelsErrors.xml";
+        public static string xsdURL = "https://raw.githubusercontent.com/FriendlyPigeon/hotels-xml-validation/refs/heads/main/Assignment4/static/Hotels.xsd";
+
+        public static void Main(string[] args)
+        {
+
+        }
+
+        public static string Verification(string xmlUrl, string xsdUrl)
+        {
+            XmlSchemaSet sc = new XmlSchemaSet();
+            // Use the schema defined at the URL
+            sc.Add(null, xsdUrl);
+            XmlReaderSettings settings = new XmlReaderSettings();
+            // Set the validation type to Schema
+            settings.ValidationType = ValidationType.Schema;
+            settings.Schemas = sc;
+
+            settings.ValidationEventHandler += new ValidationEventHandler(ValidationCallBack);
+            XmlReader reader = XmlReader.Create(xmlUrl, settings);
+        }
+
+        public static string Xml2Json(string xmlUrl)
+        {
+
+        }
+    }
+}
