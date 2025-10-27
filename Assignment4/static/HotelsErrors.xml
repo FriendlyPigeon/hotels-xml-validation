@@ -41,7 +41,8 @@
       <Street>W Broadway Rd</Street>
       <City>Tempe</City>
       <State>AZ</State>
-      <Zip>85282</Zip> <!-- Error 4: Address has no closing tag -->
+      <Zip>85282</Zip>
+    </Address>
   </Hotel>
   <Hotel>
     <Name>Fairfield by Marriott Inn</Name>
@@ -75,7 +76,7 @@
       <City>Glendale</City>
       <State>AZ</State>
       <Zip>85301</Zip>
-    </Address>
+      <!-- Error 4: An Address element has no closing tag -->
   </Hotel>
   <Hotel>
     <Name>Super 8 by Wyndham Phoenix/Mesa/Gilbert Road</Name>
