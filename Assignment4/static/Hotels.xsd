@@ -25,7 +25,7 @@
               </xs:element>
             </xs:sequence>
             <!-- Optional Rating attribute for Hotel -->
-            <xs:attribute name="Rating" type="xs:decimal" use="optional" />
+            <xs:attribute name="Rating" type="xs:string" use="optional" />
           </xs:complexType>
         </xs:element>
       </xs:sequence>
