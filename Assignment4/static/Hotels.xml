@@ -5,7 +5,7 @@
     <Phone>800-937-8461</Phone>
     <Address NearestAirport="Sky Harbor">
       <Number>11</Number>
-      <Street>E. 7th St</Street>
+      <Street>E.7th St</Street>
       <City>Tempe</City>
       <State>AZ</State>
       <Zip>85281</Zip>
@@ -58,6 +58,7 @@
   <Hotel Rating="3.7">
     <Name>Extended Stay America-Suites - Phoenix - Peoria</Name>
     <Phone>623-487-0020</Phone>
+    <Phone>878-878-8888</Phone>
     <Address NearestAirport="Sky Harbor">
       <Number>7345</Number>
       <Street>W Bell Rd</Street>
@@ -80,7 +81,7 @@
   <Hotel>
     <Name>Super 8 by Wyndham Phoenix/Mesa/Gilbert Road</Name>
     <Phone>480-359-2683</Phone>
-    <Address NearestAirport="SKy Harbor">
+    <Address NearestAirport="Sky Harbor">
       <Number>1550</Number>
       <Street>S Gilbert Rd</Street>
       <City>Mesa</City>
@@ -103,6 +104,7 @@
   <Hotel>
     <Name>Crowne Plaza Resort Phoenix - Chandler Golf Resort, an IHG Hotel</Name>
     <Phone>480-812-0900</Phone>
+    <Phone>123-456-7891</Phone>
     <Address NearestAirport="Sky Harbor">
       <Number>1</Number>
       <Street>N San Marcos Pl</Street>
