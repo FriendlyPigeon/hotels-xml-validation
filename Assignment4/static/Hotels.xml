@@ -92,6 +92,7 @@
   <Hotel>
     <Name>Staybridge Suites Phoenix - Chandler by IHG</Name>
     <Phone>480-821-2626</Phone>
+    <Phone>555-555-5555</Phone>
     <Address NearestAirport="Sky Harbor">
       <Number>3990</Number>
       <Street>W Chandler Blvd</Street>
