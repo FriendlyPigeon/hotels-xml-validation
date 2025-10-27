@@ -48,9 +48,7 @@ namespace ConsoleApp1
                 errors += $"Validation Error: {e.Message}\n";
             };
 
-            //XmlReader reader = XmlReader.Create(xmlUrl, settings);
-            //while (reader.Read()) { }
-
+            // Catch the validation errors while reading through XML and save them
             try
             {
                 using (XmlReader reader = XmlReader.Create(xmlUrl, settings))
@@ -63,11 +61,6 @@ namespace ConsoleApp1
                 schemaErrors = true;
                 errors += $"Validation Error: {ex.Message}\n";
             }
-            //catch (Exception ex)
-            //{
-            //    schemaErrors = true;
-            //    errors += $"Other Error: {ex.Message}\n";
-            //}
 
             if (!schemaErrors)
                 return "No Error";
